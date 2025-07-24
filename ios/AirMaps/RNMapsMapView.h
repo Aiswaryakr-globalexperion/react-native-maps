@@ -9,16 +9,16 @@
 
 #import <React/RCTViewComponentView.h>
 #import <UIKit/UIKit.h>
-#if __has_include(<ReactNativeMaps/generated/RNMapsHostViewDelegate.h>)
-#import <ReactNativeMaps/generated/RNMapsHostViewDelegate.h>
+#if __has_include(<ReactNativeMaps/generated/RNMapsHostVewDelegate.h>)
+#import <ReactNativeMaps/generated/RNMapsHostVewDelegate.h>
 #else
-#import "RNMapsHostViewDelegate.h"
+#import "RNMapsHostVewDelegate.h"
 #endif
 @class AIRMap;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RNMapsMapView : RCTViewComponentView<RNMapsHostViewDelegate>
+@interface RNMapsMapView : RCTViewComponentView<RNMapsHostVewDelegate>
 
 @end
 

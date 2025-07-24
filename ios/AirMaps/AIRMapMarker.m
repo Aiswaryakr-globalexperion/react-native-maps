@@ -117,7 +117,6 @@ NSInteger const AIR_CALLOUT_OPEN_ZINDEX_BASELINE = 999;
             _pinView.layer.zPosition = self.zIndex;
             _pinView.displayPriority = self.displayPriority;
             _pinView.zPriority = self.zIndex;
-            _pinView.centerOffset = self.centerOffset;
             return _pinView;
         }
 
@@ -135,7 +134,7 @@ NSInteger const AIR_CALLOUT_OPEN_ZINDEX_BASELINE = 999;
             _markerView.subtitleVisibility = self.subtitleVisibility ?: MKFeatureVisibilityHidden;
             _markerView.displayPriority = self.displayPriority;
             _markerView.zPriority = self.zIndex;
-            _markerView.centerOffset = self.centerOffset;
+
 
         }
         return _markerView ?: _pinView;
@@ -336,11 +335,6 @@ NSInteger const AIR_CALLOUT_OPEN_ZINDEX_BASELINE = 999;
 {
     _hasSetCalloutOffset = YES;
     [super setCalloutOffset:calloutOffset];
-}
-
-- (void) setCenterOffset:(CGPoint)centerOffset
-{
-    [super setCenterOffset:centerOffset];
 }
 
 - (BOOL)shouldShowCalloutView

@@ -245,7 +245,7 @@ class RNMapsGoogleMapViewEventEmitter : public ViewEventEmitter {
 
   struct OnRegionChangeStart {
       OnRegionChangeStartRegion region;
-    bool isGesture;
+    bool continuous;
     };
 
   struct OnRegionChangeRegion {
@@ -257,7 +257,7 @@ class RNMapsGoogleMapViewEventEmitter : public ViewEventEmitter {
 
   struct OnRegionChange {
       OnRegionChangeRegion region;
-    bool isGesture;
+    bool continuous;
     };
 
   struct OnRegionChangeCompleteRegion {
@@ -269,7 +269,7 @@ class RNMapsGoogleMapViewEventEmitter : public ViewEventEmitter {
 
   struct OnRegionChangeComplete {
       OnRegionChangeCompleteRegion region;
-    bool isGesture;
+    bool continuous;
     };
 
   struct OnUserLocationChangeCoordinate {
@@ -593,7 +593,7 @@ class RNMapsMapViewEventEmitter : public ViewEventEmitter {
 
   struct OnRegionChangeStart {
       OnRegionChangeStartRegion region;
-    bool isGesture;
+    bool continuous;
     };
 
   struct OnRegionChangeRegion {
@@ -605,7 +605,7 @@ class RNMapsMapViewEventEmitter : public ViewEventEmitter {
 
   struct OnRegionChange {
       OnRegionChangeRegion region;
-    bool isGesture;
+    bool continuous;
     };
 
   struct OnRegionChangeCompleteRegion {
@@ -617,7 +617,7 @@ class RNMapsMapViewEventEmitter : public ViewEventEmitter {
 
   struct OnRegionChangeComplete {
       OnRegionChangeCompleteRegion region;
-    bool isGesture;
+    bool continuous;
     };
 
   struct OnUserLocationChangeCoordinate {
@@ -842,19 +842,5 @@ class RNMapsPolylineEventEmitter : public ViewEventEmitter {
     OnPressPosition position;
     };
   void onPress(OnPress value) const;
-};
-class RNMapsUrlTileEventEmitter : public ViewEventEmitter {
- public:
-  using ViewEventEmitter::ViewEventEmitter;
-
-  
-  
-};
-class RNMapsWMSTileEventEmitter : public ViewEventEmitter {
- public:
-  using ViewEventEmitter::ViewEventEmitter;
-
-  
-  
 };
 } // namespace facebook::react

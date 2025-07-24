@@ -78,10 +78,6 @@
   _polyline.strokeWidth = strokeWidth;
 }
 
-- (void)setFillColor:(UIColor *)fillColor {
-  // fillColor not support
-}
-
 - (void)setLineDashPattern:(NSArray<NSNumber *> *)lineDashPattern {
   _lineDashPattern = lineDashPattern;
   [self configureStyleSpansIfNeeded];
