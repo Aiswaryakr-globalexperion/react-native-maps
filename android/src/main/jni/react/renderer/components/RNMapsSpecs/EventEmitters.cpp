@@ -318,7 +318,7 @@ void RNMapsGoogleMapViewEventEmitter::onRegionChangeStart(OnRegionChangeStart $e
   region.setProperty(runtime, "longitudeDelta", $event.region.longitudeDelta);
   $payload.setProperty(runtime, "region", region);
 }
-$payload.setProperty(runtime, "isGesture", $event.isGesture);
+$payload.setProperty(runtime, "continuous", $event.continuous);
     return $payload;
   });
 }
@@ -335,7 +335,7 @@ void RNMapsGoogleMapViewEventEmitter::onRegionChange(OnRegionChange $event) cons
   region.setProperty(runtime, "longitudeDelta", $event.region.longitudeDelta);
   $payload.setProperty(runtime, "region", region);
 }
-$payload.setProperty(runtime, "isGesture", $event.isGesture);
+$payload.setProperty(runtime, "continuous", $event.continuous);
     return $payload;
   });
 }
@@ -352,7 +352,7 @@ void RNMapsGoogleMapViewEventEmitter::onRegionChangeComplete(OnRegionChangeCompl
   region.setProperty(runtime, "longitudeDelta", $event.region.longitudeDelta);
   $payload.setProperty(runtime, "region", region);
 }
-$payload.setProperty(runtime, "isGesture", $event.isGesture);
+$payload.setProperty(runtime, "continuous", $event.continuous);
     return $payload;
   });
 }
@@ -730,7 +730,7 @@ void RNMapsMapViewEventEmitter::onRegionChangeStart(OnRegionChangeStart $event) 
   region.setProperty(runtime, "longitudeDelta", $event.region.longitudeDelta);
   $payload.setProperty(runtime, "region", region);
 }
-$payload.setProperty(runtime, "isGesture", $event.isGesture);
+$payload.setProperty(runtime, "continuous", $event.continuous);
     return $payload;
   });
 }
@@ -747,7 +747,7 @@ void RNMapsMapViewEventEmitter::onRegionChange(OnRegionChange $event) const {
   region.setProperty(runtime, "longitudeDelta", $event.region.longitudeDelta);
   $payload.setProperty(runtime, "region", region);
 }
-$payload.setProperty(runtime, "isGesture", $event.isGesture);
+$payload.setProperty(runtime, "continuous", $event.continuous);
     return $payload;
   });
 }
@@ -764,7 +764,7 @@ void RNMapsMapViewEventEmitter::onRegionChangeComplete(OnRegionChangeComplete $e
   region.setProperty(runtime, "longitudeDelta", $event.region.longitudeDelta);
   $payload.setProperty(runtime, "region", region);
 }
-$payload.setProperty(runtime, "isGesture", $event.isGesture);
+$payload.setProperty(runtime, "continuous", $event.continuous);
     return $payload;
   });
 }

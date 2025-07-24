@@ -481,29 +481,13 @@ export class MapMarker extends React.Component<MapMarkerProps> {
       );
     }
 
-    let icon: any = this.props.icon;
-    let image: any = this.props.image;
-
-    if (this.fabricMarker) {
-      if (this.props.image) {
-        image = fixImageProp(this.props.image);
-      }
-      if (this.props.icon) {
-        icon = fixImageProp(this.props.icon);
-      }
-    } else {
-      if (this.props.image) {
-        image = fixImageProp(this.props.image);
-        if (image.uri) {
-          image = image.uri;
-        }
-      }
-      if (this.props.icon) {
-        icon = fixImageProp(this.props.icon);
-        if (icon.uri) {
-          icon = icon.uri;
-        }
-      }
+    let icon;
+    if (this.props.icon && this.fabricMarker) {
+      icon = fixImageProp(this.props.icon);
+    }
+    let image;
+    if (this.props.image && this.fabricMarker) {
+      image = fixImageProp(this.props.image);
     }
 
     const AIRMapMarker = this.getNativeComponent();
